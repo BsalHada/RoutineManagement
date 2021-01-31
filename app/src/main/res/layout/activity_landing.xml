@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.DashboardActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:id="@+id/bg_top_header"
+                android:layout_width="411dp"
+                android:layout_height="226dp"
+                android:background="@drawable/ic_bg_topheader"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.163"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/user_photo"
+                android:layout_width="163dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="72dp"
+                android:src="@drawable/ic_photo_logo"
+                app:layout_constraintStart_toStartOf="@+id/bg_top_header"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/user_id"
+                android:layout_width="227dp"
+                android:layout_height="66dp"
+                android:layout_alignBottom="@+id/bg_top_header"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="17dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="63dp"
+                android:layout_toEndOf="@+id/user_photo"
+                android:fontFamily="@font/mo_re"
+                android:text="an Information Provider"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@id/user_photo"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginTop="80dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/signup"
+                android:layout_width="259dp"
+                android:layout_height="22dp"
+                android:layout_below="@id/user_photo"
+                android:layout_gravity="center"
+                android:background="@drawable/button_background"
+                android:text="SIGN UP"
+                android:textColor="@android:color/white"/>
+
+            <Button
+                android:id="@+id/login"
+                android:layout_width="260dp"
+                android:layout_height="21dp"
+                android:layout_below="@id/signup"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/button_background"
+                android:text="Login"
+                android:textColor="@android:color/white"
+                tools:ignore="MissingConstraints"></Button>
+
+            <TextView
+                android:id="@+id/txtDashboard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/login"
+                android:layout_marginTop="60dp"
+                android:layout_marginBottom="-70dp"
+                android:fontFamily="@font/mo_re"
+                android:text="Dashboard"
+                android:textAlignment="center"
+                android:textColor="#3949AB"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/login"
+                app:layout_constraintVertical_bias="0.268"
+                tools:layout_editor_absoluteX="0dp">
+                ">
+            </TextView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
+
